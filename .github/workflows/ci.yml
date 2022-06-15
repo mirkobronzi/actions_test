@@ -1,7 +1,13 @@
 name: CI Pipeline
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
-  Runr_the_CI_pipeline:
+  Run_the_CI_pipeline:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
