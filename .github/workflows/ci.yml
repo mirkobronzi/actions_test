@@ -13,4 +13,8 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: install_python
         uses: actions/setup-python@v3
+        with:
+          python-version: 3.9
       - run: echo "python installed!"
+      - name: run_tests
+        run: pytest .
